@@ -1,48 +1,39 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import '../css/index.css'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+`
+const Header = styled.header`
+  flex-grow: 0;
+  display: none;
+`
+const Main = styled.main`
+  flex-grow: 1;
+  justify-content: left;
+  width: 100vw;
+`
+const Footer = styled.footer`
+  flex-grow: 0;
+  font-size: 0.9rem;
+  padding-bottom: var(--padding);
+  @media screen and (orientation: portrait) {
+    padding-bottom: var(--mobile-bottom-padding);
+  }
+`
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <Wrapper>
+      <Header>this is the header</Header>
+      <Main>{children}</Main>
+      <Footer>&copy; 2021 elidon consultancy</Footer>
+    </Wrapper>
   )
 }
 

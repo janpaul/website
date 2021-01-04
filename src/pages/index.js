@@ -1,21 +1,32 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { Title, Subtitle, SEO, Avatar, Layout, Social } from '../components'
 
+const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Wrapper>
+      <Title>Jan Paul Stegeman</Title>
+      <div
+        style={{
+          maxWidth: `300px`,
+          margin: 'auto',
+        }}
+      >
+        <Avatar />
+      </div>
+      <Subtitle>
+        Freelance full-stack software engineer based in (and around) Amsterdam
+      </Subtitle>
+      <Social />
+    </Wrapper>
   </Layout>
 )
 
