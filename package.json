@@ -31,8 +31,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "yarn api && gatsby build",
-    "api": "mkdir -p public/api && cp src/api/* public/api",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "yarn develop",
