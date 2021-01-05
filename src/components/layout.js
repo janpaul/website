@@ -20,8 +20,9 @@ const Main = styled.main`
 `
 const Footer = styled.footer`
   flex-grow: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding-bottom: var(--padding);
+  text-align: center;
   @media screen and (orientation: portrait) {
     padding-bottom: var(--mobile-bottom-padding);
   }
