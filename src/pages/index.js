@@ -23,7 +23,7 @@ const IndexPage = () => (
         <Avatar />
       </div>
       <Subtitle>
-        Freelance full-stack software engineer based in (and around) Amsterdam
+        Freelance full-stack software engineer based in (and around) Amsterdam.
       </Subtitle>
       <Social />
     </Wrapper>
