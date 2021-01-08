@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import {
   Twitter,
   Github,
-  Whatsapp,
   Hey,
   Reddit,
   Instagram,
+  Signal,
 } from '@icons-pack/react-simple-icons'
 import contact from '../contact.json'
 
@@ -23,8 +23,8 @@ const Social = () => (
       <StyledIconLink href={`mailto:${contact.email}`}>
         <Hey size={ICON_SIZE} />
       </StyledIconLink>
-      <StyledIconLink href={`https://wa.me/${contact.phone}`}>
-        <Whatsapp size={ICON_SIZE} />
+      <StyledIconLink href={`sgnl://${contact.phone}`}>
+        <Signal size={ICON_SIZE} />
       </StyledIconLink>
       <StyledIconLink href={`https://twitter.com/${contact.twitter}`}>
         <Twitter size={ICON_SIZE} />
